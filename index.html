@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic Tac Toe</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p id='message'></p>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tic Tac Toe-Client Project</h1>
+  </header>
+
+  <p id='message'></p>
   <form id='sign-in'>
     <fieldset>
       <legend>Please Sign In to Play The Game</legend>
@@ -50,6 +55,31 @@
   </form>
 
   <br>
+  <br>
+
+  <h4>Player 1: 𝗫</h4>
+  <br>
+  <h4>Player 2: 𝗢</h4>
+
+  <h3 class="game-header">Let's Play the Game</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col">Box 0</div>
+      <div class="col">Box 1</div>
+      <div class="col">Box 2</div>
+      <div class="w-100"></div>
+      <div class="col">Box 3</div>
+      <div class="col">Box 4</div>
+      <div class="col">Box 5</div>
+      <div class="w-100"></div>
+      <div class="col">Box 6</div>
+      <div class="col">Box 7</div>
+      <div class="col">Box 8</div>
+    </div>
+  </div>
+
+  <br>
+  <br>
 
   <form id='sign-out'>
     <fieldset>
@@ -66,6 +96,10 @@
       <input type='submit' value='Play Again' />
     </fieldset>
   </form>
+  <br>
+  <footer>
+    <h5>ⓒ2020 Akash Modi</h5>
+  </footer>
 
-    </body>
+</body>
 </html>
