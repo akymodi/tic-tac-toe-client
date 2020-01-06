@@ -12,6 +12,60 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic Tac Toe</h1>
+
+      <p id='message'></p>
+  <form id='sign-in'>
+    <fieldset>
+      <legend>Please Sign In to Play The Game</legend>
+      <input name='credentials[email]' type='email' placeholder="email" />
+      <input name='credentials[password]' type='password' placeholder="password" />
+      <input type='submit' value='sign in!' />
+    </fieldset>
+  </form>
+
+  <br>
+  <h3>OR</h3>
+  <br>
+
+  <form id='sign-up'>
+    <fieldset>
+      <legend>Sign Up Now to Play The Game</legend>
+      <input name='credentials[email]' type='email' placeholder="email" />
+      <input name='credentials[password]' type='password' placeholder="password" />
+      <input name='credentials[password_confirmation]' type='password' placeholder="password confirmation" />
+      <input type='submit' value='sign up!' />
+    </fieldset>
+  </form>
+
+  <br>
+
+  <form id='pwd-change'>
+    <fieldset>
+      <legend>Change your password</legend>
+      <input name='passwords[old]' type='password' placeholder="Old password" />
+      <input name='passwords[new]' type='password' placeholder="New password" />
+      <input type='submit' value='change password!' />
+    </fieldset>
+  </form>
+
+  <br>
+
+  <form id='sign-out'>
+    <fieldset>
+      <legend>Sign Out Here!</legend>
+      <input type='submit' value='Sign Out!' />
+    </fieldset>
+  </form>
+
+  <br>
+
+  <form id='play-again'>
+    <fieldset>
+      <legend>Play Again</legend>
+      <input type='submit' value='Play Again' />
+    </fieldset>
+  </form>
+
     </body>
 </html>
