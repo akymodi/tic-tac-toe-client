@@ -15,11 +15,15 @@
 
 <body>
 
+  <!-- site title -->
   <header>
     <h1>Tic Tac Toe-Client Project</h1>
   </header>
 
+  <!-- Message that display the success or failuer of the login/signup/change password -->
   <p id='message'></p>
+
+  <!-- sign in form -->
   <form id='sign-in'>
     <fieldset>
       <legend>Please Sign In to Play The Game</legend>
@@ -29,10 +33,12 @@
     </fieldset>
   </form>
 
+  <!-- A simple option text for user expereince -->
   <br>
-  <h3>OR</h3>
+  <h3 id="or-text">OR</h3>
   <br>
 
+  <!-- sign up form -->
   <form id='sign-up'>
     <fieldset>
       <legend>Sign Up Now to Play The Game</legend>
@@ -44,62 +50,65 @@
   </form>
 
   <br>
-
-  <form id='pwd-change'>
-    <fieldset>
-      <legend>Change your password</legend>
-      <input name='passwords[old]' type='password' placeholder="Old password" />
-      <input name='passwords[new]' type='password' placeholder="New password" />
-      <input type='submit' value='change password!' />
-    </fieldset>
-  </form>
-
   <br>
-  <br>
+  <!-- Game page that display the features of the game -->
+  <div class="gameboard">
 
-  <h4>Player 1: 𝗫</h4>
-  <br>
-  <h4>Player 2: 𝗢</h4>
+    <!-- Player titles -->
+    <h4 class="player-title-1">Player 1: 𝗫</h4>
+    <br>
+    <h4 class="player-title-2">Player 2: 𝗢</h4>
 
-  <h3 class="game-header">Let's Play the Game</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col">Box 0</div>
-      <div class="col">Box 1</div>
-      <div class="col">Box 2</div>
-      <div class="w-100"></div>
-      <div class="col">Box 3</div>
-      <div class="col">Box 4</div>
-      <div class="col">Box 5</div>
-      <div class="w-100"></div>
-      <div class="col">Box 6</div>
-      <div class="col">Box 7</div>
-      <div class="col">Box 8</div>
+    <!-- Game header -->
+    <h3 class="game-header">Let's Play the Game</h3>
+
+    <!-- Box container of the game-->
+    <div class="container">
+      <div class="row">
+        <div class="col">Box 0</div>
+        <div class="col">Box 1</div>
+        <div class="col">Box 2</div>
+        <div class="w-100"></div>
+        <div class="col">Box 3</div>
+        <div class="col">Box 4</div>
+        <div class="col">Box 5</div>
+        <div class="w-100"></div>
+        <div class="col">Box 6</div>
+        <div class="col">Box 7</div>
+        <div class="col">Box 8</div>
+      </div>
     </div>
+
+    <!-- Game reset button-->
+    <form id='play-again'>
+      <fieldset>
+        <legend>Play Again</legend>
+        <input type='submit' value='Play Again' />
+      </fieldset>
+    </form>
+
+    <!-- Game sign-out button-->
+    <form id='sign-out'>
+      <fieldset>
+        <legend>Sign Out Here!</legend>
+        <input type='submit' value='Sign Out!' />
+      </fieldset>
+    </form>
+
+    <!-- Change password form-->
+    <form id='pwd-change'>
+      <fieldset>
+        <legend>Change your password</legend>
+        <input name='passwords[old]' type='password' placeholder="Old password" />
+        <input name='passwords[new]' type='password' placeholder="New password" />
+        <input type='submit' value='change password!' />
+      </fieldset>
+    </form>
   </div>
 
-  <br>
-  <br>
-
-  <form id='sign-out'>
-    <fieldset>
-      <legend>Sign Out Here!</legend>
-      <input type='submit' value='Sign Out!' />
-    </fieldset>
-  </form>
-
-  <br>
-
-  <form id='play-again'>
-    <fieldset>
-      <legend>Play Again</legend>
-      <input type='submit' value='Play Again' />
-    </fieldset>
-  </form>
-  <br>
+  <!-- footer for more contains-->
   <footer>
     <h5>ⓒ2020 Akash Modi</h5>
   </footer>
-
 </body>
 </html>
