@@ -19,6 +19,9 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('.gameboard').show()
+  $('#or-text').hide()
+
   console.log(response)
 }
 
@@ -42,6 +45,7 @@ const signOutSuccess = function (response) {
   $('#sign-in').show()
   $('#pwd-change').hide()
   $('#sign-out').hide()
+  $('.gameboard').hide()
   console.log(response)
 }
 
