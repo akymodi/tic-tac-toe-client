@@ -47,15 +47,20 @@ const onSignOut = () => {
     .catch(ui.signOutFailure)
 }
 
-// player logic
-const currentPlayer = 'X'
-const nextPlayer = 'O'
+// player turn logic
+let currentPlayer = 'X'
 
 const onClick = (event) => {
   const id = event.target.id
   console.log(id)
   // id.innerHTML += ('x')
-  $(event.target).text('x')
+  // if (currentPlayer === 'X') {
+  //   $(event.target).text('O')
+  // } else if (currentPlayer === 'O') {
+  //   $(event.target).text('x')
+  // }
+  currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
+  $(event.target).text(currentPlayer)
 }
 
 // event handdler jquery
