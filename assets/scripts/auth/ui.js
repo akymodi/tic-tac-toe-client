@@ -54,6 +54,11 @@ const signOutFailure = function (error) {
   console.log(error)
 }
 
+// const playerClicks = function (click) {
+//   $('#box-0').text('X')
+//   console.log(click)
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,

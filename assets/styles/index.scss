@@ -1,9 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
 
-.col {
-  border: 2px solid;
-  height: 40vh;
+td {
+  border: 3px solid #099999;
+  cursor: pointer;
+  font-family: 'Arial';
+  font-size: 70px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100px;
 }
+
+table {
+  margin: auto;
+}
+
+// .col {
+//   border: 2px solid;
+//   height: 40vh;
+// }
 
 .game-header {
   text-align: center;
