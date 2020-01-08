@@ -47,21 +47,32 @@ const onSignOut = () => {
     .catch(ui.signOutFailure)
 }
 
-// player turn logic
+// golable variable for the gameboard
+// let gameboard;
+
+// golable variable value for the default player
 let currentPlayer = 'X'
+
+// wining patterns that determins a winner based on the combination
+const winingPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7],
+  [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+
+// this variable will store and element with all box class in HTML
+// const boxClickable = document.getElementById('box').innerHTML = ''
+
+// const boxClickable = $.get('/index.html', function(data) {
+//   $('.box').html(data)
+// }
+// const boxClickable = document.getElementsByClassName('box').innerHTML
 
 const onClick = (event) => {
   const id = event.target.id
   console.log(id)
-  // id.innerHTML += ('x')
-  // if (currentPlayer === 'X') {
-  //   $(event.target).text('O')
-  // } else if (currentPlayer === 'O') {
-  //   $(event.target).text('x')
-  // }
-  currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
+  // if (document.getElementsByClassName('box').innerHTML === '') {
   $(event.target).text(currentPlayer)
+  currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
 }
+// }
 
 // event handdler jquery
 const addHandlers = () => {
@@ -69,7 +80,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#pwd-change').on('submit', onPwdChange)
   $('#sign-out').on('submit', onSignOut)
-  $('.col').on('click', onClick)
+  $('.box').on('click', onClick)
   // $('#box-0').on('click', onClick2)
 }
 
