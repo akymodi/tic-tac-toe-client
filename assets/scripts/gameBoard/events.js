@@ -17,12 +17,23 @@ let currentPlayer = 'X'
 // const winingPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7],
 //   [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
+const startGame = () => {
+  event.preventDefault()
+//   if (checkWining === true)  {
+//   $('#game-message').text(`${currentPlayer} wins`)
+// } else {
+//   $('#game-message').text(`X its your turn`)
+}
+
 // function that gets the ID, pass the value and checks the players turn
 const onClick = (event) => {
   event.preventDefault()
 
+  // $('#game-message').text('X its your turn')
+
   if (!gameOver) {
-  // getting the ID of the box clicked
+    // $(event.target).text('X its your turn')
+    // getting the ID of the box clicked
     const id = event.target.id
     console.log(id)
 
@@ -35,8 +46,14 @@ const onClick = (event) => {
 
     // ternery operator that switches the player turn
     currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
+
+    // logging message for the next player
+    $('#game-message').text(`${currentPlayer} its your turn`)
+  } else if (checkWining === true) {
+    $('.game-message').text('Please reset the game to star')
+    // console.log('good luck')
   } else {
-    console.log('Good Luck')
+    $('.game-message').text('Please start your game')
   }
   // callback checkWinning function to see if the game is over or not
   checkWining()
@@ -45,7 +62,7 @@ const onClick = (event) => {
 const checkWining = () => {
   // if top row is a win
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[0] === gameBoard[2]) {
-    gameOver = true
+    gameOver = true && $('.game-message').text('Please reset the game to star')
     console.log('You Win')
     // else if middle row is a win
   } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[3] === gameBoard[5]) {
@@ -84,8 +101,11 @@ const checkWining = () => {
 
 const addHandlers = () => {
   $('.box').one('click', onClick)
+  $('#start-game').on('submit', startGame)
+  // $('.game-header h3').html('X its your turn')
   // $('.game-header').on('result', gameResult)
 }
 module.exports = {
-  addHandlers
+  addHandlers,
+  startGame
 }

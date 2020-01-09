@@ -23,6 +23,9 @@
   <!-- Message that display the success or failuer of the login/signup/change password -->
   <p id='message'></p>
 
+  <!-- Game message header shows the result -->
+  <!-- <p id="game-message"></p> -->
+
   <!-- sign in form -->
   <form id='sign-in'>
     <fieldset>
@@ -51,6 +54,7 @@
 
   <br>
   <br>
+
   <!-- Game page that display the features of the game -->
   <div class="gameboard">
 
@@ -59,9 +63,8 @@
     <br>
     <h4 class="player-title-2">Player 2: 𝗢</h4>
 
-    <!-- Game header -->
-    <h3 class="game-header">Let's Play the Game</h3>
-
+    <!-- Game message header shows the result -->
+    <p id="game-message">X it's your turn</p>
 
       <!-- Game Boxes-->
       <table>
@@ -81,6 +84,14 @@
           <td class="box" id="8"></td>
         </tr>
       </table>
+
+      <!--Start Game button-->
+      <form id='start-game'>
+        <fieldset>
+          <legend>Start Game</legend>
+          <input type='submit' value='Start Game' />
+        </fieldset>
+      </form>
 
     <!-- Game reset button-->
     <form id='play-again'>
