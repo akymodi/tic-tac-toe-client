@@ -4,8 +4,11 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
 
-// golable variable for the gameboard
-// let gameboard;
+// variable for game start or finish
+const gameOver = false
+
+// create a veriable  arrays ofempty strings to use
+let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 // golable variable value for the default player
 let currentPlayer = 'X'
@@ -14,30 +17,32 @@ let currentPlayer = 'X'
 const winingPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7],
   [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
-// this variable will store and element with all box class in HTML
-// const boxClickable = document.getElementById('box').innerHTML = ''
 
-// const boxClickable = $.get('/index.html', function(data) {
-//   $('.box').html(data)
-// }
-// const boxClickable = document.getElementsByClassName('box').innerHTML
 
+// function that gets the ID, pass the value and checks the players turn
 const onClick = (event) => {
-  // turn(event.taget.id, playerOne)
+  event.preventDefault()
+
+  // getting the ID of the box clicked
   const id = event.target.id
   console.log(id)
-  // if (document.getElementsByClassName('box').innerHTML === '') {
+
+  // this put current player value on the board
   $(event.target).text(currentPlayer)
+
+  // getting the value from the current value and passing it on to the empty arrays
+  gameBoard[id] = currentPlayer
+  console.log(gameBoard)
+
+  // ternery operator that switches the player turn
   currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
 }
-// }
 
-// function turn(eventId, player)
-// origBoard[eventId] = playerOne
-// document.getElementById(eventId).innerText = player;
+// for (let i=o, i < winingPatterns.length, i++)
+// check gameboard for wining patterns and if that make sense declare the winner
 
 const addHandlers = () => {
-  $('.box').on('click', onClick)
+  $('.box').one('click', onClick)
 }
 
 module.exports = {
