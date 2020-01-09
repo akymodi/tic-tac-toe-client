@@ -37,58 +37,38 @@ const onClick = (event) => {
   checkWining()
 }
 
-// if top row is a win
-// else if middle row is a win
-// else if bottom row is a win
-// else if left column is a win
-// else if middle aolumn is a win
-// else if right column is a win
-// else if right diagonal is a win
-// else if left diagonal is a win
-
-
-// for (let i=o, i < winingPatterns.length, i++)
 const checkWining = () => {
   // if top row is a win
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[0] === gameBoard[2]) {
     console.log('You Win')
     // else if middle row is a win
-  } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[3] === gameBoard[2]) {
+  } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[3] === gameBoard[5]) {
     console.log('You Win')
-  // else if middle row is a win
+  // else if bottom row is a win
+  } else if (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[6] === gameBoard[8]) {
+    console.log('You Win')
+  // else if left column is a win
+  } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[0] === gameBoard[6]) {
+    console.log('You Win')
+  // else if middle aolumn is a win
+  } else if (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[1] === gameBoard[7]) {
+    console.log('You Win')
+  // else if right column is a win
+  } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[2] === gameBoard[8]) {
+    console.log('You Win')
+  // else if right diagonal is a win
+  } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[2] === gameBoard[6]) {
+    console.log('You Win')
+  // else if left diagonal is a win
+  } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[0] === gameBoard[8]) {
+    console.log('You Win')
+  // default statement
   } else {
-    console.log('You Didnt Win')
-}
-  // } else if (winingPatterns[1] == 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[2] == 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[3] === 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[4] === 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[5] === 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[6] === 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[7] === 'X') {
-  //   console.log('You Win')
-  // } else if (winingPatterns[8] === 'X') {
-  //   console.log('You Win')
-  // }
+    console.log('Game not over yet')
+  }
 }
 
-//   for (let i = 0; i < winingPatterns.length; i++) {
-//     if (winingPatterns[i] === ['X', 'X', 'X'] )
-//     || gameBoard === ['O', 'O', 'O']) {
-//       console.log('You Win')
-//     } else {
-//       console.log('You Less')
-//     }
-//   }
-// }
-
-// check gameboard for wining patterns and if that make sense declare the winner
+// const
 
 const addHandlers = () => {
   $('.box').one('click', onClick)

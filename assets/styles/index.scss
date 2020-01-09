@@ -12,6 +12,7 @@ td {
 }
 
 table {
+  animation: bounce .25s 3;
   margin: auto;
 }
 
@@ -34,4 +35,13 @@ h1 {
 
 footer {
   text-align: center;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
 }
