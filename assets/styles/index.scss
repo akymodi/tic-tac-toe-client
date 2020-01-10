@@ -12,6 +12,7 @@ td {
 }
 
 table {
+  animation: bounce .25s 3;
   margin: auto;
 }
 
@@ -20,7 +21,9 @@ table {
 //   height: 40vh;
 // }
 
-.game-header {
+p {
+  font-family: 'Arial';
+  font-size: 20px;
   text-align: center;
 }
 
@@ -35,3 +38,12 @@ h1 {
 footer {
   text-align: center;
 }
+
+// @keyframes bounce {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   100% {
+//     transform: translateY(20px);
+//   }
+// }

@@ -11,5 +11,6 @@ const gameEvents = require('./gameBoard/events')
 $(() => {
   authEvents.addHandlers()
   gameEvents.addHandlers()
+  // $('#game-message').hide()
   // clickEvents.addHandlers()
 })
