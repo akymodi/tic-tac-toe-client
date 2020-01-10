@@ -19,16 +19,16 @@ let currentPlayer = 'X'
 //   [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
 const startGame = () => {
-  event.preventDefault()
-//   if (checkWining === true)  {
-//   $('#game-message').text(`${currentPlayer} wins`)
-// } else {
-//   $('#game-message').text(`X its your turn`)
+  if (checkWining === true) {
+    return onClick()
+  } else {
+    return checkWining() !== true
+  }
 }
 
 // function that gets the ID, pass the value and checks the players turn
 const onClick = (event) => {
-  event.preventDefault()
+  // event.preventDefault()
 
   // $('#game-message').text('X its your turn')
 
@@ -99,7 +99,7 @@ const checkWining = () => {
   // default statement
   } else {
     gameOver = false
-    console.log('Game not over yet')
+    $('#game-result').html(`It's a Draw! To Play again click on Start Game`)
   }
 }
 
@@ -113,7 +113,7 @@ const checkWining = () => {
 
 const addHandlers = () => {
   $('.box').one('click', onClick)
-  $('#start-game').on('submit', startGame)
+  $('#start-game').on('clicked', startGame)
   // $('.game-header h3').html('X its your turn')
   // $('.game-header').on('result', gameResult)
 }
