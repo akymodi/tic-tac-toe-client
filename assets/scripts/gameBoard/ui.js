@@ -2,8 +2,8 @@
 
 const store = require('./../store')
 //
-const onGame = function (response) {
-  $('#game-message').text('💻Player X its your turn👍')
+const gameResult = function (response) {
+  $('#game-result').text('💻Youwon👍')
   console.log(response)
 }
 
@@ -62,7 +62,7 @@ const signOutFailure = function (error) {
 // }
 
 module.exports = {
-  onGame,
+  gameResult,
   signUpFailure,
   signInSuccess,
   signInFailure,
