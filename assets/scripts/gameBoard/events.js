@@ -55,9 +55,9 @@ const onClick = (event) => {
       ui.gameResult(store.currentPlayer)
     }
   }
-  // if (checkWining() === true) {
-  //   $('.game-result').text('Please reset the game to star')
-  // }
+  if (checkWining() === true) {
+    $('#game-result').text('Please reset the game to star')
+  }
   // callback checkWinning function to see if the game is over or not
   checkWining()
   // gameStatus()
@@ -67,35 +67,35 @@ const checkWining = () => {
   // if top row is a win
   if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[0] === gameBoard[2]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
     // else if middle row is a win
   } else if (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[3] === gameBoard[5]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if bottom row is a win
   } else if (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[6] === gameBoard[8]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if left column is a win
   } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[0] === gameBoard[6]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if middle aolumn is a win
   } else if (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[1] === gameBoard[7]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if right column is a win
   } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[2] === gameBoard[8]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if right diagonal is a win
   } else if (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[2] === gameBoard[6]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! Play again click on Start Game`)
   // else if left diagonal is a win
   } else if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[0] === gameBoard[8]) {
     gameOver = true
-    console.log('You Win')
+    $('#game-result').html(`Player ${currentPlayer} won! To Play again click on Start Game`)
   // default statement
   } else {
     gameOver = false

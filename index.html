@@ -20,6 +20,7 @@
     <h1>Tic Tac Toe-Client Project</h1>
   </header>
 
+
   <!-- Message that display the success or failuer of the login/signup/change password -->
   <p id='message'></p>
 
@@ -37,9 +38,9 @@
   </form>
 
   <!-- A simple option text for user expereince -->
-  <br>
+  <!-- <br> -->
   <h3 id="or-text">OR</h3>
-  <br>
+  <!-- <br> -->
 
   <!-- sign up form -->
   <form id='sign-up'>
@@ -51,23 +52,40 @@
       <input type='submit' value='sign up!' />
     </fieldset>
   </form>
-
+<!--
   <br>
-  <br>
+  <br> -->
 
   <!-- Game page that display the features of the game -->
   <div class="gameboard">
 
     <!-- Player titles -->
-    <h4 class="player-title-1">Player 1: 𝗫</h4>
-    <br>
-    <h4 class="player-title-2">Player 2: 𝗢</h4>
+    <h4 class="player-title-1">Player 👆: 𝗫   Player ✌️: O</h4>
+    <!-- <br>
+    <h4 class="player-title-2">Player 2: 𝗢</h4> -->
+
+    <!--Start Game button-->
+    <form id='start-game'>
+      <fieldset>
+        <legend>Start Game</legend>
+        <input type='submit' value='Start Game' />
+      </fieldset>
+    </form>
+
+    <!-- Game reset button / playagain-->
+    <!-- <form id='play-again'>
+      <fieldset>
+        <legend>Play Again</legend>
+        <input type='submit' value='Play Again' />
+      </fieldset>
+    </form> -->
+
 
     <!-- Game message header tells whos turn it is -->
     <p id="game-message">X it's your turn</p>
 
     <!-- Game message shows the game result -->
-    <p id="game-result">Let's see who wins</p>
+    <p id="game-result"></p>
 
       <!-- Game Boxes-->
       <table>
@@ -87,22 +105,6 @@
           <td class="box" id="8"></td>
         </tr>
       </table>
-
-      <!--Start Game button-->
-      <form id='start-game'>
-        <fieldset>
-          <legend>Start Game</legend>
-          <input type='submit' value='Start Game' />
-        </fieldset>
-      </form>
-
-    <!-- Game reset button-->
-    <form id='play-again'>
-      <fieldset>
-        <legend>Play Again</legend>
-        <input type='submit' value='Play Again' />
-      </fieldset>
-    </form>
 
     <!-- Game sign-out button-->
     <form id='sign-out'>
