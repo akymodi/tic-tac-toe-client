@@ -1,10 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
 
+header {
+  background-color: #45f9ea;
+  position:fixed;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+}
+
+body {
+  background-color: ccfdff;
+}
+
 td {
-  border: 3px solid #099999;
+  border: 3px solid white;
+  background-color: #099999;
   cursor: pointer;
   font-family: 'Arial';
   font-size: 70px;
+  color: white;
   height: 100px;
   text-align: center;
   vertical-align: middle;
@@ -29,21 +44,72 @@ p {
 
 h1 {
   text-align: center;
+  color: gray;
 }
+
+h3 {
+  text-align: center;
+  margin: 20px 10px;
+}
+
+.player-title-1 {
+  text-align: center;
+  margin: 20px 10px;
+}
+//
+// .player-title-2 {
+//   text-align: center;
+//   margin: auto;
+// }
 
 .gameboard {
   display: none;
 }
 
+h5 {
+  color: gray;
+}
+
+
 footer {
-  text-align: center;
+background-color: #45f9ea;
+position:fixed;
+bottom: 0px;
+width: 100%;
+text-align: center;
+height: 30px;
 }
 
 // @keyframes bounce {
 //   0% {
 //     transform: translateY(0);
 //   }
-//   100% {
-//     transform: translateY(20px);
+//   100% {5//     transform: translateY(20px);
 //   }
 // }
+
+
+#sign-in {
+  position: absoulte;
+  margin: 200px 0px 10px 35%;
+}
+
+#sign-up {
+  position: absoulte;
+  margin: 10px 0px 10px 35%;
+}
+
+#message {
+  position: center;
+  margin: 50px 0px;
+}
+
+#start-game {
+  position: center;
+  margin: auto;
+}
+
+#play-again {
+  text-align: right;
+  margin: auto;
+}
