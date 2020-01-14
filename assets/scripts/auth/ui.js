@@ -20,7 +20,7 @@ const signInSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('.gameboard').show()
-  $('#or-text').hide()
+  $('#or').hide()
 
   console.log(response)
 }
