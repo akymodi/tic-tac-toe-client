@@ -9,7 +9,7 @@ const store = require('../store')
 let gameOver = false
 
 // create a veriable  arrays ofempty strings to use
-const gameBoard = ['', '', '', '', '', '', '', '', '']
+let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 // golable variable value for the default player
 let currentPlayer = 'O'
@@ -18,29 +18,28 @@ let currentPlayer = 'O'
 // const winingPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7],
 //   [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
-const startGame = () => {
-  if (gameOver) {
-    gameOver = false
-    // $('#game-message').text(`${currentPlayer} wins`)
-  } else {
-    $('#game-message').text(`X its your turn`)
-  }
-  $('#game-result').text(' ')
-  $('#0').text('')
-  $('#1').text('')
-  $('#2').text('')
-  $('#3').text('')
-  $('#4').text('')
-  $('#5').text('')
-  $('#6').text('')
-  $('#7').text('')
-  $('#8').text('')
-  // write JS function to clear the gameboard
+const startGame = (event) => {
+  // $(event.target).call(onClick())
+  // $('#game-message').text(`X its your turn`)
+  // $('#game-result').text(' ')
+  $('#0').empty()
+  $('#1').empty()
+  $('#2').empty()
+  $('#3').empty()
+  $('#4').empty()
+  $('#5').empty()
+  $('#6').empty()
+  $('#7').empty()
+  $('#8').empty()
+  // // write JS function to clear the gameboard
+  gameBoard = ['', '', '', '', '', '', '', '', '']
+  gameOver = true
+  onClick()
 }
 
 // function that gets the ID, pass the value and checks the players turn
 const onClick = (event) => {
-  event.preventDefault()
+  // event.preventDefault()
 
   // $('#game-message').text('X its your turn')
 
@@ -61,20 +60,12 @@ const onClick = (event) => {
     $(event.target).text(currentPlayer)
 
     // logging message for the next player
-    // $('#game-message').text(`Next Player its your turn`)
-
-    // if (checkWining()) {
-    //   ui.gameResult(store.currentPlayer)
-    // }
+    $('#game-message').text(`Next Player its your turn`)
   } else {
-    startGame()
+    $('#game-message').text(`Game Over ${currentPlayer} won! Please click start game for another round`)
   }
-  // if (checkWining() === true) {
-  //   $('#game-result').text('Please reset the game to star')
-  // }
   // callback checkWinning function to see if the game is over or not
   checkWining()
-  // gameStatus()
 }
 
 const checkWining = () => {
@@ -118,19 +109,9 @@ const checkWining = () => {
   return gameOver
 }
 
-// const gameStatus = () => {
-//   if (checkWining === true) {
-//     $('.game-result').text('Please reset the game to star')
-//   } else {
-//     $('.game-result').text('game over')
-//   }
-// }
-
 const addHandlers = () => {
-  $('.box').one('click', onClick)
+  $('.box').on('click', onClick)
   $('#start-game').on('click', startGame)
-  // $('.game-header h3').html('X its your turn')
-  // $('.game-header').on('result', gameResult)
 }
 module.exports = {
   addHandlers,
