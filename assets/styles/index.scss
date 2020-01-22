@@ -5,8 +5,21 @@ header {
   position:fixed;
   top: 0px;
   width: 100%;
+  height: 5%;
+}
+
+h1 {
   text-align: center;
-  height: 50px;
+  color: gray;
+  font-size: 25px;
+  margin: 7px 10px;
+}
+
+h5 {
+  text-align: center;
+  color: gray;
+  font-size: 15px;
+  margin: 5px 10px;
 }
 
 body {
@@ -42,12 +55,14 @@ p {
   text-align: center;
 }
 
-h1 {
-  text-align: center;
-  color: gray;
-}
+
 
 h3 {
+  text-align: center;
+  margin: 20px 10px;
+}
+
+h2 {
   text-align: center;
   margin: 20px 10px;
 }
@@ -64,10 +79,6 @@ h3 {
 
 .gameboard {
   display: none;
-}
-
-h5 {
-  color: gray;
 }
 
 
@@ -88,16 +99,21 @@ height: 30px;
 //   }
 // }
 
-
-#sign-in {
-  position: absoulte;
-  margin: 200px 0px 10px 35%;
+.form-group {
+  display: inline-block;
+  position: center;
+  margin: 20px 20px;
 }
 
-#sign-up {
-  position: absoulte;
-  margin: 10px 0px 10px 35%;
-}
+// #sign-in {
+//   position: absolute;
+//   margin: 50px 40%;
+// }
+//
+// #sign-up {
+//   position: absolute;
+//   margin: 10px 10%;
+// }
 
 #message {
   position: center;
