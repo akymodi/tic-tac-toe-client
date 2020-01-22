@@ -14,14 +14,14 @@ let gameBoard = ['', '', '', '', '', '', '', '', '']
 // golable variable value for the default player
 let currentPlayer = 'O'
 
+// let winCombo = false
+
 // wining patterns that determins a winner based on the combination
 // const winingPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7],
 //   [2, 5, 8], [0, 4, 8], [2, 4, 6]]
 
 const startGame = (event) => {
   // $(event.target).call(onClick())
-  // $('#game-message').text(`X its your turn`)
-  // $('#game-result').text(' ')
   $('#0').empty()
   $('#1').empty()
   $('#2').empty()
@@ -31,9 +31,11 @@ const startGame = (event) => {
   $('#6').empty()
   $('#7').empty()
   $('#8').empty()
-  // // write JS function to clear the gameboard
+  // write JS function to clear the gameboard
   gameBoard = ['', '', '', '', '', '', '', '', '']
-  gameOver = true
+  gameOver = false
+  $('#game-message').html('Player X its your turn')
+  $('#game-result').html('')
   onClick()
 }
 
@@ -41,31 +43,31 @@ const startGame = (event) => {
 const onClick = (event) => {
   // event.preventDefault()
 
-  // $('#game-message').text('X its your turn')
-
   if (!gameOver) {
-    // $(event.target).text('X its your turn')
-    // getting the ID of the box clicked
-    const id = event.target.id
-    console.log(id)
+    // write an if statementgt
+    console.log('this is the one im looking for ' + $(event.target).text())
+    if ($(event.target).text() === '') {
+      const id = event.target.id
+      console.log(id)
 
-    // getting the value from the current value and passing it on to the empty arrays
-    gameBoard[id] = currentPlayer
-    console.log(gameBoard)
+      // getting the value from the current value and passing it on to the empty arrays
+      gameBoard[id] = currentPlayer
+      console.log(gameBoard)
 
-    // ternery operator that switches the player turn
-    currentPlayer === 'O' ? currentPlayer = 'X' : currentPlayer = 'O'
+      // ternery operator that switches the player turn
+      currentPlayer === 'O' ? currentPlayer = 'X' : currentPlayer = 'O'
 
-    // this put current player value on the board
-    $(event.target).text(currentPlayer)
+      // this put current player value on the board
+      $(event.target).text(currentPlayer)
 
-    // logging message for the next player
-    $('#game-message').text(`Next Player its your turn`)
-  } else {
-    $('#game-message').text(`Game Over ${currentPlayer} won! Please click start game for another round`)
+      // logging message for the next player
+      $('#game-message').text(`Next Player its your turn`)
+    } else {
+    // gameOver === true
+    }
+    // callback checkWinning function to see if the game is over or not
+    checkWining()
   }
-  // callback checkWinning function to see if the game is over or not
-  checkWining()
 }
 
 const checkWining = () => {
@@ -102,12 +104,22 @@ const checkWining = () => {
     gameOver = true
     $('#game-result').html(`Player ${currentPlayer} won! To Play again click on Start Game`)
     // default statement
+  } else if (!gameBoard.includes('')) {
+    gameOver = true
+    $('#game-result').html(`It's a draw`)
   } else {
-    gameOver = false
+    // $('#game-result').html(`It's tie, pleaseclick on Start Game to start another game`)
     console.log('Game not over yet')
   }
+  // checkDraw()
   return gameOver
 }
+
+// const checkDraw = () => {
+//   if (checkWining !== true && gameBoard !== ['', '', '', '', '', '', '', '', '']) {
+//     $('#game-result').html(`It's a draw`)
+//   }
+// }
 
 const addHandlers = () => {
   $('.box').on('click', onClick)
