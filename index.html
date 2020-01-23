@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>Tic-Tac-Toe by Akash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -24,70 +24,56 @@
   <!-- Message that display the success or failuer of the login/signup/change password -->
   <p id='message'></p>
 
-  <!-- Game message header shows the result -->
-  <!-- <p id="game-message"></p> -->
-
   <!-- sign in form -->
-  <form id='sign-in'>
-  <div class="form-group">
-    <legend>Please Sign In to Play The Game</legend>
-    <label for="exampleInputEmail1">Email address</label>
-    <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
-</form>
+  <div id='sign-in'>
+  <form>
+    <div class="form-group">
+      <h4>Please Sign In to Play The Game</h4>
+      <label for="exampleInputEmail1">Pleae Enter Your Email address</label>
+      <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Pleaes Enter Your Password</label>
+      <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
-<h2 id='or'>OR</h2>
-
+  <h4 id='or'>👆𝗢𝗥👇</h4>
 
   <!-- sign up form -->
-  <form id='sign-up'>
-  <div class="form-group">
-    <legend>Sign Up Now to Play The Game</legend>
-    <label for="exampleInputEmail1">Enter Email address</label>
-    <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Create Password</label>
-    <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
-    <label for="exampleInputPassword1">Confirm Your Password</label>
-    <input name='credentials[password_confirmation]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password confirmation">
-  </div>
-  <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
-</form>
-
-
-<!--
-  <br>
-  <br> -->
+  <div id='sign-up'>
+  <form>
+    <div class="form-group">
+      <h4>Sign Up Now to Play The Game</h4>
+      <label for="exampleInputEmail1">Enter Email address</label>
+      <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Create Password</label>
+      <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+      <label for="exampleInputPassword1">Confirm Your Password</label>
+      <input name='credentials[password_confirmation]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password confirmation">
+    </div>
+    <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
+  </form>
+</div>
 
   <!-- Game page that display the features of the game -->
   <div class="gameboard">
 
     <!-- Player titles -->
-    <h4 class="player-title-1">Player 👆: 𝗫   Player ✌️: O</h4>
+    <h4 class="player-title-1">Player 👆: 𝗫 Player ✌️: O</h4>
     <!-- <br>
     <h4 class="player-title-2">Player 2: 𝗢</h4> -->
 
     <!--Start Game button-->
-      <fieldset>
-        <button id='start-game'>
-        <legend>Start Game</legend>
-        <!-- <button type='button'> </button> -->
-      </fieldset>
-
-    <!-- Game reset button / playagain-->
-    <!-- <form id='play-again'>
-      <fieldset>
-        <legend>Play Again</legend>
-        <input type='submit' value='Play Again' />
-      </fieldset>
-    </form> -->
-
+    <fieldset>
+      <button id='start-game'>
+        <h4>Start Game</h4>
+      </button>
+    </fieldset>
 
     <!-- Game message header tells whos turn it is -->
     <p id="game-message">X it's your turn</p>
@@ -95,29 +81,29 @@
     <!-- Game message shows the game result -->
     <p id="game-result"></p>
 
-      <!-- Game Boxes-->
-      <table>
-        <tr>
-          <td class="box" id="0"></td>
-          <td class="box" id="1"></td>
-          <td class="box" id="2"></td>
-        </tr>
-        <tr>
-          <td class="box" id="3"></td>
-          <td class="box" id="4"></td>
-          <td class="box" id="5"></td>
-        </tr>
-        <tr>
-          <td class="box" id="6"></td>
-          <td class="box" id="7"></td>
-          <td class="box" id="8"></td>
-        </tr>
-      </table>
+    <!-- Game Boxes-->
+    <table>
+      <tr>
+        <td class="box" id="0"></td>
+        <td class="box" id="1"></td>
+        <td class="box" id="2"></td>
+      </tr>
+      <tr>
+        <td class="box" id="3"></td>
+        <td class="box" id="4"></td>
+        <td class="box" id="5"></td>
+      </tr>
+      <tr>
+        <td class="box" id="6"></td>
+        <td class="box" id="7"></td>
+        <td class="box" id="8"></td>
+      </tr>
+    </table>
 
     <!-- Game sign-out button-->
     <form id='sign-out'>
       <fieldset>
-        <legend>Sign Out Here!</legend>
+        <h4>Sign Out Here!</h4>
         <input type='submit' value='Sign Out!' />
       </fieldset>
     </form>
@@ -125,7 +111,7 @@
     <!-- Change password form-->
     <form id='pwd-change'>
       <fieldset>
-        <legend>Change your password</legend>
+        <h4>Change your password</h4>
         <input name='passwords[old]' type='password' placeholder="Old password" />
         <input name='passwords[new]' type='password' placeholder="New password" />
         <input type='submit' value='change password!' />
@@ -138,4 +124,5 @@
     <h5>ⓒ2020 Akash Modi</h5>
   </footer>
 </body>
+
 </html>

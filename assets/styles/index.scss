@@ -10,8 +10,9 @@ header {
 
 h1 {
   text-align: center;
-  color: gray;
+  color: #ef9207;
   font-size: 25px;
+  font-style: italic;
   margin: 7px 10px;
 }
 
@@ -62,7 +63,7 @@ h3 {
   margin: 20px 10px;
 }
 
-h2 {
+h4 {
   text-align: center;
   margin: 20px 10px;
 }
@@ -102,30 +103,47 @@ height: 30px;
 .form-group {
   display: inline-block;
   position: center;
-  margin: 20px 20px;
+  padding: 2px 13px;
 }
 
-// #sign-in {
-//   position: absolute;
-//   margin: 50px 40%;
-// }
-//
-// #sign-up {
-//   position: absolute;
-//   margin: 10px 10%;
-// }
+#sign-in {
+  display: block;
+  margin: auto;
+  padding: auto;
+  background-color: #45f9ea;
+  border-radius: 15px;
+}
+
+#sign-up {
+  display: block;
+  margin: auto;
+  padding: auto;
+  background-color: #45f9ea;
+  border-radius: 15px;
+}
 
 #message {
   position: center;
-  margin: 50px 0px;
+  font-size: 15px;
+  margin: 50px 0px 0px 0px;
+  background-color: orange;
+  color: white;
 }
 
 button {
   text-align: center;
-  margin: 0px 0px 0px 200px;
+  margin: auto;
 }
 
 #play-again {
   text-align: right;
   margin: 0px 0px 0px 200px;
 }
+//
+// @media only screen and (min-width: 800px) {
+//   #sign-in,
+//   #sign-up,
+//   {
+//     width: 40%;
+//   }
+// }

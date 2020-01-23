@@ -45,7 +45,7 @@ const onClick = (event) => {
 
   if (!gameOver) {
     // write an if statementgt
-    console.log('this is the one im looking for ' + $(event.target).text())
+    // console.log('this is the one im looking for ' + $(event.target).text())
     if ($(event.target).text() === '') {
       const id = event.target.id
       console.log(id)
