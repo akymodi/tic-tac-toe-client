@@ -1,19 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
 header {
-  background-color: #45f9ea;
-  position:fixed;
-  top: 0px;
-  width: 100%;
-  height: 5%;
+  display: block;
+  margin: auto;
+  padding: auto;
+  // background-color: #45f9ea;
+  // width: 100%;
+  // height: 5%;
 }
 
 h1 {
-  text-align: center;
+  // text-align: center;
   color: #ef9207;
-  font-size: 25px;
+  font-size: 40px;
   font-style: italic;
-  margin: 7px 10px;
+  font-family: cursive;
+  text-align: center;
 }
 
 h5 {
@@ -29,7 +31,7 @@ body {
 
 td {
   border: 3px solid white;
-  background-color: #099999;
+  background-color: #13f7e4;
   cursor: pointer;
   font-family: 'Arial';
   font-size: 70px;
@@ -123,9 +125,9 @@ height: 30px;
 }
 
 #message {
-  position: center;
+  display: block;
   font-size: 15px;
-  margin: 50px 0px 0px 0px;
+  margin: auto;
   background-color: orange;
   color: white;
 }
@@ -139,11 +141,13 @@ button {
   text-align: right;
   margin: 0px 0px 0px 200px;
 }
-//
-// @media only screen and (min-width: 800px) {
-//   #sign-in,
-//   #sign-up,
-//   {
-//     width: 40%;
-//   }
-// }
+
+@media only screen and (min-width: 800px) {
+  #sign-in,
+  #sign-up,
+  #message,
+  header,
+  {
+    width: 40%;
+  }
+}

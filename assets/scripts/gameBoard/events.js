@@ -1,9 +1,9 @@
 'use strict'
 
 // const api = require('./api')
-const ui = require('./ui')
-// const getFormFields = require('./../../../lib/get-form-fields')
-const store = require('../store')
+// const ui = require('./ui')
+// // const getFormFields = require('./../../../lib/get-form-fields')
+// const store = require('../store')
 
 // variable for game start or finish
 let gameOver = false

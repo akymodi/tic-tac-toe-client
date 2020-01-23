@@ -46,6 +46,7 @@ const signOutSuccess = function (response) {
   $('#pwd-change').hide()
   $('#sign-out').hide()
   $('.gameboard').hide()
+  $('#or').show()
   console.log(response)
 }
 
