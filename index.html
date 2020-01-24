@@ -17,7 +17,8 @@
 
   <!-- site title -->
   <header>
-    <h1>Tic Tac Toe</h1>
+    <h1>Tic Tac Toe - Game</h1>
+    <h5 id='header-sub'>by Akash Modi</h5>
   </header>
 
 
@@ -26,57 +27,55 @@
 
   <!-- sign in form -->
   <div id='sign-in'>
-  <form>
-    <div class="form-group">
-      <h4>Please Sign In to Play The Game</h4>
-      <label for="exampleInputEmail1">Pleae Enter Your Email address</label>
-      <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Pleaes Enter Your Password</label>
-      <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
-  </form>
-</div>
+    <form>
+      <div class="form-group">
+        <h4 id='to-play-title'>To Play - Sign In</h4>
+        <label for="exampleInputEmail1">Email Address</label>
+        <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email Address">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Enter Password</label>
+        <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1" placeholder="Please Enter Your Password">
+      </div>
+      <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
   <h4 id='or'>👆𝗢𝗥👇</h4>
 
   <!-- sign up form -->
   <div id='sign-up'>
-  <form>
-    <div class="form-group">
-      <h4>Sign Up Now to Play The Game</h4>
-      <label for="exampleInputEmail1">Enter Email address</label>
-      <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Create Password</label>
-      <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
-      <label for="exampleInputPassword1">Confirm Your Password</label>
-      <input name='credentials[password_confirmation]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password confirmation">
-    </div>
-    <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
-  </form>
-</div>
+    <form>
+      <div class="form-group">
+        <h4 id='new-player-title'>New Player - Sign Up</h4>
+        <label for="exampleInputEmail1">Email Address</label>
+        <input name='credentials[email]' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email Address">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Create Password</label>
+        <input name='credentials[password]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+        <label for="exampleInputPassword1">Confirm Your Password</label>
+        <input name='credentials[password_confirmation]' type="password" class="form-control" id="exampleInputPassword1" placeholder="password confirmation">
+      </div>
+      <button type="submit" value='sign in!' class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
   <!-- Game page that display the features of the game -->
   <div class="gameboard">
 
     <!-- Player titles -->
-    <h4 class="player-title-1">Player 👆: 𝗫 Player ✌️: O</h4>
+    <h4 class="player-title-1">Player 1:🆇 & Player 2:🅾</h4>
     <!-- <br>
     <h4 class="player-title-2">Player 2: 𝗢</h4> -->
 
     <!--Start Game button-->
     <fieldset>
-      <button id='start-game'>
-        <h4>Start Game</h4>
-      </button>
+      <button id='start-game' type="button" class="btn btn-primary">Start Game</button>
     </fieldset>
 
     <!-- Game message header tells whos turn it is -->
-    <p id="game-message">X it's your turn</p>
+    <p id="game-message">Player X it's Your Turn. Click in any empty box to start the game</p>
 
     <!-- Game message shows the game result -->
     <p id="game-result"></p>
@@ -101,20 +100,20 @@
     </table>
 
     <!-- Game sign-out button-->
-    <form id='sign-out'>
-      <fieldset>
-        <h4>Sign Out Here!</h4>
-        <input type='submit' value='Sign Out!' />
-      </fieldset>
-    </form>
+
+      <div id='sign-out-button'>
+        <p>Sign Out Here!</p>
+        <button id='sign-out' type="button" class="btn btn-primary">Sign Out!</button>
+      </div>
+
 
     <!-- Change password form-->
     <form id='pwd-change'>
       <fieldset>
-        <h4>Change your password</h4>
-        <input name='passwords[old]' type='password' placeholder="Old password" />
-        <input name='passwords[new]' type='password' placeholder="New password" />
-        <input type='submit' value='change password!' />
+        <p>To change your password</p>
+        <input name='passwords[old]' type='password' placeholder="Please enter old password" />
+        <input name='passwords[new]' type='password' placeholder="Now enter the new password" />
+        <button type="button" class="btn btn-primary">Change Password</button>
       </fieldset>
     </form>
   </div>

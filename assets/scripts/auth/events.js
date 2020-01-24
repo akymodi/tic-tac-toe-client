@@ -51,8 +51,8 @@ const onSignOut = () => {
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#pwd-change').on('submit', onPwdChange)
-  $('#sign-out').on('submit', onSignOut)
+  $('#pwd-change').on('click', onPwdChange)
+  $('#sign-out').on('click', onSignOut)
 }
 
 module.exports = {

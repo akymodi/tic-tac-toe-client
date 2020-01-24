@@ -35,7 +35,7 @@ const pWdChangeSuccess = function (response) {
 }
 
 const pWdChangeFailure = function (error) {
-  $('#message').text('😌Cant change your password🤯')
+  $('#message').text('😌Sorry, can not change your password🤯')
   console.log(error)
 }
 
